@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InfoWeb — Inicio</title>
+    <link rel="stylesheet" href="../css/Infoweb.css" /> 
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/1655/1655422.png" alt="Logo InfoWeb" class="app-logo" />
+            <h1>InfoWeb</h1>
+        </div>
+        
+        <nav class="main-nav">
+            <a href="inicio.html" class="active">Noticias</a>
+            <a href="perfil.html">Mi Perfil</a>
+            <a href="login.html" class="logout-btn">Salir</a>
+        </nav>
+    </header>
+
+    <main class="content-grid">
+        
+        <aside class="sidebar-filters">
+            <h2>🔍 Filtrar Noticias</h2>
+
+            <form action="#" method="get" class="filters-form">
+                
+                <div class="filter-group">
+                    <label for="search">Buscar</label>
+                    <input type="search" id="search" name="q" placeholder="Buscar por título o contenido..." />
+                </div>
+
+                <div class="filter-group">
+                    <label for="category">Categoría</label>
+                    <select id="category" name="category">
+                        <option value="">Todas las Categorías</option>
+                        <option value="economia">Economía</option>
+                        <option value="deportes">Deportes</option>
+                        <option value="politica">Política</option>
+                        <option value="tecnologia">Tecnología</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="date">Fecha de publicación</label>
+                    <input type="date" id="date" name="date" />
+                </div>
+
+                <button type="submit" class="btn-filter">Aplicar Filtros</button>
+                <button type="reset" class="btn-reset">Restablecer</button>
+            </form>
+        </aside>
+
+        <section class="news-list">
+            <h2>Últimas Noticias</h2>
+            
+            <article class="news-article">
+                <div class="article-image-container">
+                    
+                </div>
+                <div class="article-content">
+                    <h3>Impacto de la tecnología en la educación a distancia</h3>
+                    <p class="article-meta">Categoría: Tecnología | Publicado: 06/11/2025</p>
+                    <p>Un análisis sobre cómo las nuevas herramientas digitales están transformando los métodos de enseñanza y el acceso al conocimiento...</p>                   
+                    <a href="noticia-completa.html?id=1" class="read-more">Leer Noticia Completa →</a>
+                </div>
+            </article>
+
+            <article class="news-article">
+                <div class="article-image-container">
+                    
+                </div>
+                <div class="article-content">
+                    <h3>El mercado de valores muestra recuperación en el tercer trimestre</h3>
+                    <p class="article-meta">Categoría: Economía | Publicado: 05/11/2025</p>
+                    <p>Expertos analizan las tendencias que impulsan el crecimiento y las expectativas para el próximo año fiscal...</p>
+                    <a href="noticia-completa.html?id=2" class="read-more">Leer Noticia Completa →</a>
+                </div>
+            </article>
+            
+            <article class="news-article">
+                <div class="article-image-container">
+                   
+                </div>
+                <div class="article-content">
+                    <h3>Campeonato mundial: Sorprendente victoria del equipo juvenil</h3>
+                    <p class="article-meta">Categoría: Deportes | Publicado: 04/11/2025</p>
+                    <p>Los jóvenes atletas demuestran su potencial en una final emocionante que rompe todos los pronósticos...</p>
+                    <a href="noticia-completa.html?id=3" class="read-more">Leer Noticia Completa →</a>
+                </div>
+            </article>
+            
+        </section>
+        
+    </main>
+    
+    <footer class="main-footer">
+        <p>&copy; 2025 InfoWeb. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

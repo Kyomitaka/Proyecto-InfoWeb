@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InfoWeb — Registro</title>
+    <link rel="stylesheet" href="../css/Infoweb.css">
+</head>
+
+<body class="login registro">
+    <main class="login-card">
+        <div class="back-link">
+            <a href="login.html" aria-label="Volver a Iniciar Sesión">Volver</a>
+        </div>
+
+        <img src="https://cdn-icons-png.flaticon.com/512/1655/1655422.png" alt="Logo InfoWeb" class="logo" />
+
+        <h1>Crear cuenta</h1>
+        <p>Completa la información para registrarte</p>
+
+        <form action="inicio.html" method="post" novalidate> 
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="nombre@dominio.com" required />
+            </div>
+
+            <div class="form-group">
+                <label for="pass">Contraseña</label>
+                <input type="password" id="pass" name="pass" placeholder="••••••••" required />
+            </div>
+
+            <div class="form-group">
+                <label for="pass2">Confirmar contraseña</label>
+                <input type="password" id="pass2" name="pass2" placeholder="Repite tu contraseña" required />
+            </div>
+
+            <div class="form-group">
+                <label for="cel">Celular</label>
+                <input type="tel" id="cel" name="cel" placeholder="xxxx-xxxx" />
+            </div>
+
+            <div class="form-group">
+                <label for="dir">Dirección</label>
+                <input type="text" id="dir" name="dir" placeholder="Provincia, cantón, dristrito" />
+            </div>
+
+            <button type="submit" class="btn-login">Registrarse</button>
+
+            <div class="register-link">
+                ¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
