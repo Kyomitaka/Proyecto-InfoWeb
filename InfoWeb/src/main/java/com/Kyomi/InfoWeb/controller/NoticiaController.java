@@ -1,5 +1,7 @@
 package com.Kyomi.InfoWeb.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -10,11 +12,24 @@ import com.Kyomi.InfoWeb.service.NoticiaService;
 import org.springframework.ui.Model;
 
 @Controller
-@RequestMapping("/noticia")
+@RequestMapping("/")
 public class NoticiaController {
 
     @Autowired
     private NoticiaService noticiaService;
+
+    @GetMapping({"/inicio", "/"})
+    public String mostrarInicio(Model model) {
+        List<Noticia> listaNoticias = noticiaService.consultarNoticias(
+            null,
+            null,
+            null
+        ); 
+        
+        model.addAttribute("noticias", listaNoticias);
+
+        return "inicio"; 
+    }
 
     @PostMapping("/guardar")
     public String guardarNoticia(@ModelAttribute Noticia noticia,

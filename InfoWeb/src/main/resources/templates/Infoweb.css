@@ -61,7 +61,7 @@ h1 {
     font-size: 0.9em;
 }
 
-input[type="email"],
+input[type="username"],
 input[type="password"],
 input[type="tel"],
 input[type="text"] {
@@ -306,11 +306,11 @@ input:focus {
     color: #BD4545;
 }
 
-/* --- Pie de Página --- */
 .main-footer {
     text-align: center;
     padding: 15px;
     background-color: #E6E6E6; 
     color: #5E3030;
-    font-size: 0.85em;
+    padding: 0.5em;
+    font-size: 0.9rem;
 }

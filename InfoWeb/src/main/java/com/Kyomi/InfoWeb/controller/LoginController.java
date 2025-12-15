@@ -35,7 +35,7 @@ public class LoginController {
             redirectAttributes.addFlashAttribute("idUsuario", loginResult.getIdUsuario());
             redirectAttributes.addFlashAttribute("idRol", loginResult.getIdRol());
             
-            return "inicio.html"; 
+            return "redirect:/inicio"; 
             
         } else {
             String mensajeError = "Error de login: ";
@@ -56,7 +56,7 @@ public class LoginController {
             }
             
             redirectAttributes.addFlashAttribute("error", mensajeError);
-            return "login"; 
+            return "redirect:/login"; 
         }
     }
 }

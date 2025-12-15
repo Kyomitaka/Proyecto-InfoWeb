@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InfoWeb — Agregar Noticia</title>
+    <link rel="stylesheet" href="../templates/Infoweb.css" /> 
+    </head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/1655/1655422.png" alt="Logo InfoWeb" class="app-logo" />
+            <h1>InfoWeb</h1>
+        </div>
+        
+        <nav class="main-nav">
+            <a href="inicio.html">Noticias</a>
+            <a href="noticia.html" class="active">Agregar Noticia</a>
+            <a href="tema.html">Agregar Tema</a>
+            <a href="subtema.html">Agregar Subtema</a>
+            <a href="login.html" class="logout-btn">Salir</a>
+        </nav>
+    </header>
+
+    <main class="content-centered">
+        
+        <div class="form-container" style="max-width: 800px; margin: 30px auto; padding: 0 20px;">
+            <div class="back-link">
+                <a href="inicio.html" aria-label="Volver a Inicio">← Volver</a>
+            </div>
+
+            <h2>Crear Nueva Noticia</h2>
+
+            <form action="/api/noticias/insertar" method="post" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label for="idTema">Tema</label>
+                    <select id="idTema" name="P_ID_TEMA" required>
+                        <option value="">Selecciona el Tema</option>
+                        <option value="1">Tecnología</option>
+                        <option value="2">Deportes</option>
+                        <option value="3">Economía</option>
+                        <option value="4">Entretenimiento</option>
+                        <option value="5">Salud</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="idSubtema">Subtema</label>
+                    <select id="idSubtema" name="P_ID_SUBTEMA" required>
+                        <option value="">Selecciona un Subtema</option>
+                        <option value="1">Inteligencia Artificial</option>
+                        <option value="2">Ciberseguridad</option>
+                        <option value="3">Fútbol Internacional</option>
+                        <option value="4">Fórmula 1</option>
+                        <option value="5">Criptomonedas</option>
+                        <option value="6">Mercado de Valores</option>
+                        <option value="7">Cine y Series</option>
+                        <option value="8">Gaming</option>
+                        <option value="9">Salud Mental</option>
+                        <option value="10">Nutrición y Fitness</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="titulo">Título de la Noticia</label>
+                    <input type="text" id="titulo" name="P_TITULO" placeholder="Título de la noticia" maxlength="255" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="autor">Autor</label>
+                    <input type="text" id="autor" name="P_AUTOR" placeholder="Nombre del periodista o editor" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="contenido">Contenido de la Noticia</label>
+                    <textarea id="contenido" name="P_CONTENIDO" rows="10" placeholder="Escribe el cuerpo completo del artículo..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="fechaPublicacion">Fecha de Publicación</label>
+                    <input type="date" id="fechaPublicacion" name="P_FECHA_PUBLICACION" required />
+                </div>
+
+                
+                <input type="hidden" name="P_CONTADOR_VISITAS" value="0">
+                <input type="hidden" name="P_CONTADOR_ENVIOS" value="0">
+                <input type="hidden" name="P_PROMEDIO_CALIFICACION" value="0.0">
+
+
+                <button type="submit" class="btn-login" style="margin-top: 20px;">Publicar Noticia</button>
+            </form>
+        </div>
+    </main>
+    
+    <footer class="main-footer">
+        <p>&copy; 2025 InfoWeb. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
